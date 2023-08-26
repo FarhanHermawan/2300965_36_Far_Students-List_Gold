@@ -1,21 +1,21 @@
-const express = require('express');
-const studentController = require('../controller/studentController');
-
+const express = require("express");
+const studentController = require("../controller/studentController");
+const apiPath = "/api/v1/students";
 const router = express.Router();
 
 // Create a new student
-router.post('/', studentController.createStudent);
+router.post(apiPath + "/", studentController.createStudent);
 
 // Get all students
-router.get('/', studentController.getAllStudents);
+router.get(apiPath + "/", studentController.getAllStudents);
 
 // Get a specific student by ID
-router.get('/:id', studentController.getStudentById);
+router.get(apiPath + "/:id", studentController.getStudentById);
 
 // Update a student by ID
-router.put('/:id', studentController.updateStudent);
+router.put(apiPath + "/:id", studentController.updateStudent);
 
 // Delete a student by ID
-router.delete('/:id', studentController.deleteStudent);
+router.delete(apiPath + "/:id", studentController.deleteStudent);
 
 module.exports = router;

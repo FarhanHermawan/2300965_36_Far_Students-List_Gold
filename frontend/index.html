@@ -1,82 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&family=Mochiy+Pop+One&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Navbar Responsive</title>
-    </head>
+</head>
 <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Harvard University</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">List of Student Names</a>
-        </li>
-        </ul>
-    </div>
+    <!-- Navbar using Bootstrap components -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top transparent-navbar">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    
-<!-- header -->
-<header class="header">
-    <div class="container text-center">
-        <h1 class="display-4">Welcome to Harvard University <h1>
-        <p class="lead">Where world-class professors, innovative research, and a dynamic student community come together to advance education and foster change in the world.</p>
-        <a href="students-list.html" class="btn btn-custom btn-lg">Get Started</a>
-    </div>
-</header>
 
-<section class="content">
-    <h2>Our Mission</h2>
-    <p>The mission of Harvard University is to educate and inspire future leaders, advance knowledge, and address the world's greatest challenges through teaching, research, and public service.</p>
-</section>
+    <div class="fullscreen-background">
+        <div class="text-box">
+            <P>I'M</P>
+            <h1>ADMIN</h1>
+            <h3>I CAN HELP YOU TO UPLOAD AND DELETE STUDENTS</h3>
 
-<section class="content">
-    <h2>About Harvard University</h2>
-    <p>Harvard University, founded in 1636, stands as one of the oldest and most prestigious research institutions globally, situated in Cambridge, Massachusetts. Its diverse faculties and schools cover an extensive range of academic disciplines, producing influential alumni across various fields. The university's commitment to interdisciplinary collaboration and its iconic motto "Veritas" reflect its dedication to truth-seeking and innovation. With a rich history, groundbreaking research, and a globally recognized reputation, Harvard remains a beacon of academic excellence.</p>
-</section>
-
-<section class="news">
-    <h2>News</h2>
-    <div class="news-container">
-        <div class="news-item">
-            <img src="./img/news-1.png" alt="Berita 1">
-            <h3>Harvard Research Discovers New Species in Amazon Rainforest</h3>
-            <p>Cambridge, MA - A team of Harvard researchers recently identified a new species of amphibian in the Amazon rainforest.</p>
+            <div class="row">
+                <a href="./student/index.html">Student List Here &#x27F6;</a>
+                <span>You can enroll students here <br> You can delete the student here</span>
+            </div>
         </div>
-        <div class="news-item">
-            <img src="./img/news-2.png" alt="Berita 2">
-            <h3>Harvard Launches Innovative Online Learning Platform</h3>
-            <p>Cambridge, MA - Harvard University has unveiled a new online learning platform that offers courses to learners worldwide.</p>
-        </div>
-        <div class="news-item">
-            <img src="./img/news-3.png" alt="Berita 3">
-            <h3>Harvard Launches Innovative Online Learning Platform</h3>
-            <p>Cambridge, MA - Harvard University has unveiled a new online learning platform that offers courses to learners worldwide.</p>
+        <div class="social-icons">
+            <a href=""></a><img src="img/dribble.png"></a>
+            <a href=""></a><img src="img/telegram.png"></a>
+            <a href=""></a><img src="img/instagram.png"></a>
         </div>
     </div>
-</section>
 
-<footer>
-    <p>Copy rights © 2023 Harvard University. All rights reserved.</p>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

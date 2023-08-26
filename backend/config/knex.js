@@ -1,4 +1,3 @@
-// config/knex.js
 const knex = require('knex');
 const config = require('../knexfile');
 

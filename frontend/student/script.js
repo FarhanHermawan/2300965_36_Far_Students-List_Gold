@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to fetch and display students from the API
   async function fetchStudents() {
     try {
-      const response = await fetch("http://localhost:3000/students");
+      const response = await fetch("http://localhost:3000/api/v1/students");
       const students = await response.json();
 
       studentList.innerHTML = ""; // Clear existing list
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function handleDelete(event) {
     const id = event.target.dataset.id;
     try {
-      const response = await fetch(`http://localhost:3000/students/${id}`, {
+      const response = await fetch(`http://localhost:3000/api/v1/students/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (nim && name && studentClass) {
       try {
-        const response = await fetch("http://localhost:3000/students", {
+        const response = await fetch("http://localhost:3000/api/v1/students", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -1,104 +1,129 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+/* styles.css */
+
+.transparent-navbar {
+  background-color: transparent;
+  backdrop-filter: blur(10px); /* Efek blur latar belakang */
 }
-.header {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: url(img/harvard-bg.png);
+
+.fullscreen-background {
+  background-image: url("./img/bg.png"); /* Ganti dengan URL gambar yang sesuai */
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Menyebabkan elemen ini mengambil tinggi 100% dari tampilan (viewport) */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-position: center;
-  color:white ;
 }
 
-.btn-custom {
-  background-color: #ff9900;
-  border-color: #ff9900;
+/* styles.css */
+.text-box {
+  color: #fff;
+  position: absolute;
+  bottom: 8%;
+  font-family: "Poppins", sans-serif;
+  left: 50px;
 }
 
-/* content */
-.content {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #f7f7f7;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+.text-box p {
+  font-size: 50px;
+  font-weight: 600;
+  margin-left: 25px;
+  margin-bottom: -10px;
 }
 
-
-
-/* Styling for text inside content */
-.content h2 {
-  color: #333;
-  margin-bottom: 10px;
+.text-box h1 {
+  font-size: 190px;
+  line-height: 200px;
+  margin-left: -10px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(img/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
 }
 
-.content p {
-  color: #666;
+@keyframes back {
+  100% {
+    background-position: 2000px;
+  }
 }
 
-.image img {
-  max-width: 100%;
-  height: auto;
+.text-box h3 {
+  font-size: 40px;
+  font-weight: 500;
 }
 
-/* Styling for the news section */
-.news {
-  margin: 20px;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.news h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.news-container {
+.text-box .row {
   display: flex;
-  flex-wrap: wrap; /* Tambahkan ini agar berita melingkar jika ada lebih banyak */
-  gap: 20px; /* Tambahkan jarak antara berita */
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.news-item {
-  flex-basis: calc(33.33% - 20px);
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f7f7f7;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+.text-box a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 2px solid #fff;
 }
 
-.news-item img {
-  max-width: 100%;
-  border-radius: 5px;
+.social-icons {
+  position: absolute;
+  right: 5%;
+  bottom: 8%;
 }
 
-.news-item h3 {
-  margin-top: 10px;
-  color: #333;
+.social-icons img {
+  width: 25px;
+  display: block;
+  margin: 25px 5px;
 }
 
-.news-item p {
-  color: #666;
+@media (max-width: 768px) {
+  /* Styles for screens with a maximum width of 768px (typical for mobile devices) */
+
+  .text-box {
+    position: relative; /* Change position to relative for better mobile layout */
+    bottom: auto; /* Remove the bottom positioning for mobile layout */
+    left: 10px; /* Adjust the left positioning for better mobile layout */
+    text-align: center; /* Center align the text for mobile layout */
+    padding: 20px; /* Add some padding for better spacing */
+  }
+
+  .text-box p {
+    font-size: 24px; /* Adjust font size for better mobile readability */
+  }
+
+  .text-box h1 {
+    font-size: 80px; /* Adjust font size for better mobile readability */
+    line-height: 90px; /* Adjust line height for better mobile readability */
+  }
+
+  .text-box h3 {
+    font-size: 28px; /* Adjust font size for better mobile readability */
+  }
+
+  .text-box .row {
+    justify-content: center; /* Center align the row items */
+    margin-top: 20px; /* Adjust margin for better spacing */
+  }
+
+  .text-box a {
+    margin-right: 10px; /* Adjust margin for better spacing */
+  }
+
+  .social-icons {
+    position: relative; /* Change position to relative for better mobile layout */
+    right: auto; /* Remove the right positioning for mobile layout */
+    bottom: auto; /* Remove the bottom positioning for mobile layout */
+    text-align: center; /* Center align the social icons for mobile layout */
+    margin-top: 20px; /* Adjust margin for better spacing */
+  }
+
+  .social-icons img {
+    margin: 10px 10px; /* Adjust margin for better spacing */
+  }
 }
-
-
-
-/* Styling for the footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #f4f4f4;
-  border-top: 1px solid #ddd;
-}
-
