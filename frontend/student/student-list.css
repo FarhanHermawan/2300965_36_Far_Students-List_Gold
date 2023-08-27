@@ -3,7 +3,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
 }
 
 .container {
@@ -39,7 +38,7 @@ h1 {
 }
 
 .add-student input {
-  width: 97%;
+  width: 98%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -88,7 +87,13 @@ li:hover {
 
 /* Responsive Styling */
 @media (max-width: 600px) {
+  .container {
+    width: 97%;
+  }
   .add-student input {
-    width: 100%;
+    width: 87%;
+  }
+  li {
+    width: 84%;
   }
 }

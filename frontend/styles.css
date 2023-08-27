@@ -5,12 +5,17 @@
   backdrop-filter: blur(10px); /* Efek blur latar belakang */
 }
 
+
+.navbar-brand{
+  font-family: 'Lato',sans-serif;
+}
+
 .fullscreen-background {
-  background-image: url("./img/bg.png"); /* Ganti dengan URL gambar yang sesuai */
+  background-image: url("./img/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* Menyebabkan elemen ini mengambil tinggi 100% dari tampilan (viewport) */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,8 +88,6 @@
 }
 
 @media (max-width: 768px) {
-  /* Styles for screens with a maximum width of 768px (typical for mobile devices) */
-
   .text-box {
     position: relative; /* Change position to relative for better mobile layout */
     bottom: auto; /* Remove the bottom positioning for mobile layout */
