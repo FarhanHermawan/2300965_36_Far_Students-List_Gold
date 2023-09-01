@@ -3,27 +3,33 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #b7c4cf; /* Warna latar belakang */
 }
 
 .container {
   width: 99.4%;
-  margin:10px; /* Tambahkan spasi kiri dan kanan */
+  margin: 10px; /* Tambahkan spasi kiri dan kanan */
 }
 
 .back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   display: inline-block;
   padding: 5px 10px;
-  background-color: #ddd;
-  color: #333;
+  background-color: #eee3cb; /* Warna tombol Back */
+  color: #967e76; /* Warna teks tombol Back */
   border: none;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
   transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  border-radius: 8px; /* Melengkungkan tombol */
 }
 
+
 .back-button:hover {
-  background-color: #ccc;
+  background-color: #d7c0ae; /* Warna tombol Back saat hover */
   transform: scale(1.05);
 }
 
@@ -42,7 +48,7 @@ h1 {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px; /* Melengkungkan input */
 }
 
 .button {
@@ -50,7 +56,7 @@ h1 {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 8px; /* Melengkungkan tombol */
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
@@ -66,18 +72,19 @@ ul {
 
 li {
   width: 97%;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
+  background-color: #eee3cb; /* Warna latar belakang item mahasiswa */
+  border: 1px solid #ccc;
   margin: 10px 0;
   padding: 15px;
-  border-radius: 2px;
+  border-radius: 8px; /* Melengkungkan kotak item mahasiswa */
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: column; /* Posisi tombol ke tengah secara horizontal */
+  align-items: center;
+  position: relative;
 }
 
 li:hover {
-  background-color: #eee;
+  background-color: #d7c0ae; /* Warna latar belakang item mahasiswa saat hover */
 }
 
 .error {
@@ -85,15 +92,87 @@ li:hover {
   font-size: 14px;
 }
 
+.edit-button {
+  background-color: #967e76; /* Warna tombol Edit */
+  color: #fff; /* Warna teks tombol Edit */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px; /* Melengkungkan tombol Edit */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Tambahkan jarak antara tombol Edit dan Delete */
+  margin-bottom: 5px; /* Tambahkan jarak antara tombol Edit dan Delete */
+}
+
+.edit-button:hover {
+  background-color: #b7c4cf; /* Warna tombol Edit saat hover */
+}
+
+.delete-button {
+  background-color: #967e76; /* Warna tombol Delete */
+  color: #fff; /* Warna teks tombol Delete */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px; /* Melengkungkan tombol Delete */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px; /* Tambahkan jarak antara tombol Delete dan item berikutnya */
+}
+
+.delete-button:hover {
+  background-color: #d7c0ae; /* Warna tombol Delete saat hover */
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #eee3cb; /* Warna latar belakang modal */
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px; /* Melengkungkan modal */
+  width: 31%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #967e76; /* Warna tombol close */
+  cursor: pointer;
+}
+
 /* Responsive Styling */
 @media (max-width: 600px) {
-  .container {
+  .container{
     width: 97%;
   }
-  .add-student input {
-    width: 87%;
-  }
+
   li {
-    width: 84%;
+    width: 87%; /* Lebar item 100% saat layar kecil */
+    margin: 10px 0;
+  }
+
+  .back-button {
+    left: 5px; /* Menggeser tombol Back ke kiri lebih jauh */
+  }
+
+  .add-student input {
+    width: 90%; /* Lebar input sedikit lebih kecil saat layar kecil */
   }
 }

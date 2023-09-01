@@ -1,132 +1,151 @@
-/* styles.css */
-
-.transparent-navbar {
-  background-color: transparent;
-  backdrop-filter: blur(10px); /* Efek blur latar belakang */
-}
-
-
-.navbar-brand{
-  font-family: 'Lato',sans-serif;
-}
-
-.fullscreen-background {
-  background-image: url("./img/bg.png");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  background-color: #967E76;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.5);
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-/* styles.css */
-.text-box {
+.jumbotron h1 {
+  font-size: 48px;
   color: #fff;
-  position: absolute;
-  bottom: 8%;
-  font-family: "Poppins", sans-serif;
-  left: 50px;
 }
 
-.text-box p {
-  font-size: 50px;
-  font-weight: 600;
-  margin-left: 25px;
-  margin-bottom: -10px;
-}
-
-.text-box h1 {
-  font-size: 190px;
-  line-height: 200px;
-  margin-left: -10px;
-  color: transparent;
-  -webkit-text-stroke: 1px #fff;
-  background: url(img/back.png);
-  -webkit-background-clip: text;
-  background-position: 0 0;
-  animation: back 20s linear infinite;
-}
-
-@keyframes back {
-  100% {
-    background-position: 2000px;
-  }
-}
-
-.text-box h3 {
-  font-size: 40px;
-  font-weight: 500;
-}
-
-.text-box .row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.text-box a {
+.jumbotron p {
   color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  margin-right: 20px;
-  border: 2px solid #fff;
 }
 
-.social-icons {
-  position: absolute;
-  right: 5%;
-  bottom: 8%;
+.btn-primary {
+  margin-top: 20px;
 }
 
-.social-icons img {
-  width: 25px;
+#about {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+#about h2 {
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.img-fluid {
+  width: 600px;
+  max-width: 800px;
+  height: auto; 
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+#news {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+#news h2 {
+  margin-bottom: 20px;
+}
+
+.news-item {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
   display: block;
-  margin: 25px 5px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 10px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.news-item:hover img {
+  transform: scale(1.05);
+}
+
+.news-item h4 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.news-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+
+#contact {
+  padding: 80px 0;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+}
+
+#contact form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact form .form-control {
+  margin-bottom: 15px;
+}
+
+#contact form .btn {
+  background-color: #333;
+  border-color: #333;
+}
+
+#contact form .btn:hover {
+  background-color: #555;
+  border-color: #555;
 }
 
 @media (max-width: 768px) {
-  .text-box {
-    position: relative; /* Change position to relative for better mobile layout */
-    bottom: auto; /* Remove the bottom positioning for mobile layout */
-    left: 10px; /* Adjust the left positioning for better mobile layout */
-    text-align: center; /* Center align the text for mobile layout */
-    padding: 20px; /* Add some padding for better spacing */
-  }
-
-  .text-box p {
-    font-size: 24px; /* Adjust font size for better mobile readability */
-  }
-
-  .text-box h1 {
-    font-size: 80px; /* Adjust font size for better mobile readability */
-    line-height: 90px; /* Adjust line height for better mobile readability */
-  }
-
-  .text-box h3 {
-    font-size: 28px; /* Adjust font size for better mobile readability */
-  }
-
-  .text-box .row {
-    justify-content: center; /* Center align the row items */
-    margin-top: 20px; /* Adjust margin for better spacing */
-  }
-
-  .text-box a {
-    margin-right: 10px; /* Adjust margin for better spacing */
-  }
-
-  .social-icons {
-    position: relative; /* Change position to relative for better mobile layout */
-    right: auto; /* Remove the right positioning for mobile layout */
-    bottom: auto; /* Remove the bottom positioning for mobile layout */
-    text-align: center; /* Center align the social icons for mobile layout */
-    margin-top: 20px; /* Adjust margin for better spacing */
-  }
-
-  .social-icons img {
-    margin: 10px 10px; /* Adjust margin for better spacing */
+  .img-fluid {
+    margin-left: 0;
+    width: 100%;
   }
 }
