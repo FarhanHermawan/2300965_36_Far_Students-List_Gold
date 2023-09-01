@@ -1,131 +1,67 @@
-/* frontend/student-list.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #b7c4cf; /* Warna latar belakang */
+  background-color: #2D4356;
+}
+
+h1{
+  margin-top: 40px;
 }
 
 .container {
-  width: 99.4%;
-  margin: 10px; /* Tambahkan spasi kiri dan kanan */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.back-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: inline-block;
-  padding: 5px 10px;
-  background-color: #eee3cb; /* Warna tombol Back */
-  color: #967e76; /* Warna teks tombol Back */
+.btn-secondary {
+  background-color: #435B66;
+  color: #fff;
   border: none;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
-  border-radius: 8px; /* Melengkungkan tombol */
-}
-
-
-.back-button:hover {
-  background-color: #d7c0ae; /* Warna tombol Back saat hover */
-  transform: scale(1.05);
+  margin-top: 20px;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #EAB2A0;
 }
 
-.add-student {
+.row {
   margin-bottom: 15px;
 }
 
-.add-student input {
-  width: 98%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px; /* Melengkungkan input */
-}
-
-.button {
-  background-color: #007bff;
+.form-control {
+  background-color: #A76F6F;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px; /* Melengkungkan tombol */
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
-.button:hover {
-  background-color: #0056b3;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  width: 97%;
-  background-color: #eee3cb; /* Warna latar belakang item mahasiswa */
-  border: 1px solid #ccc;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 8px; /* Melengkungkan kotak item mahasiswa */
-  display: flex;
-  flex-direction: column; /* Posisi tombol ke tengah secara horizontal */
-  align-items: center;
-  position: relative;
-}
-
-li:hover {
-  background-color: #d7c0ae; /* Warna latar belakang item mahasiswa saat hover */
-}
-
-.error {
-  color: #f44336;
-  font-size: 14px;
-}
-
-.edit-button {
-  background-color: #967e76; /* Warna tombol Edit */
-  color: #fff; /* Warna teks tombol Edit */
+.btn-primary {
+  background-color: #EAB2A0;
+  color: #fff;
   border: none;
-  padding: 8px 15px;
-  border-radius: 8px; /* Melengkungkan tombol Edit */
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 10px; /* Tambahkan jarak antara tombol Edit dan Delete */
-  margin-bottom: 5px; /* Tambahkan jarak antara tombol Edit dan Delete */
 }
 
-.edit-button:hover {
-  background-color: #b7c4cf; /* Warna tombol Edit saat hover */
+.table {
+  max-width: 75%;
+  overflow-x: auto;
+  background-color: #435B66;
+  color: #fff;
 }
 
-.delete-button {
-  background-color: #967e76; /* Warna tombol Delete */
-  color: #fff; /* Warna teks tombol Delete */
-  border: none;
-  padding: 8px 15px;
-  border-radius: 8px; /* Melengkungkan tombol Delete */
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px; /* Tambahkan jarak antara tombol Delete dan item berikutnya */
+.table th {
+  background-color: #A76F6F;
+  color: #fff;
 }
 
-.delete-button:hover {
-  background-color: #d7c0ae; /* Warna tombol Delete saat hover */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #EAB2A0;
+  color: #fff;
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -138,10 +74,10 @@ li:hover {
 }
 
 .modal-content {
-  background-color: #eee3cb; /* Warna latar belakang modal */
+  background-color: #A76F6F;
   margin: 15% auto;
   padding: 20px;
-  border-radius: 8px; /* Melengkungkan modal */
+  border-radius: 8px;
   width: 31%;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -153,26 +89,39 @@ li:hover {
   right: 20px;
   font-size: 24px;
   font-weight: bold;
-  color: #967e76; /* Warna tombol close */
+  color: #fff;
   cursor: pointer;
 }
 
-/* Responsive Styling */
 @media (max-width: 600px) {
-  .container{
-    width: 97%;
-  }
-
-  li {
-    width: 87%; /* Lebar item 100% saat layar kecil */
-    margin: 10px 0;
+  .container {
+    height: auto;
   }
 
   .back-button {
-    left: 5px; /* Menggeser tombol Back ke kiri lebih jauh */
+    left: 5px;
   }
 
   .add-student input {
-    width: 90%; /* Lebar input sedikit lebih kecil saat layar kecil */
+    width: 90%;
+  }
+
+  .modal-content {
+    margin: 50% auto;
+    padding: 50px;
+    border-radius: 8px;
+    width: 80%;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    margin-left: 10%;
+    font-size: 20px;
+  }
+
+  .back-button {
+    padding: 2.5px 5px;
   }
 }

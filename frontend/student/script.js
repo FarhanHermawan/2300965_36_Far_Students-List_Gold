@@ -1,4 +1,3 @@
-// frontend/script.js
 document.addEventListener("DOMContentLoaded", () => {
   const studentList = document.getElementById("student-list");
   const addButton = document.getElementById("add-button");
@@ -18,15 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
       studentList.innerHTML = ""; // Clear existing list
 
       students.forEach(student => {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `
-          <span>NIM: ${student.nim}</span>
-          <span>Name: ${student.name}</span>
-          <span>Class: ${student.class}</span>
-          <button class="edit-button" data-id="${student.id}">Edit</button>
-          <button class="delete-button" data-id="${student.id}">Delete</button>
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${student.nim}</td>
+          <td>${student.name}</td>
+          <td>${student.class}</td>
+          <td>
+            <button class="btn btn-warning edit-button" data-id="${student.id}">Edit</button>
+            <button class="btn btn-danger delete-button" data-id="${student.id}">Delete</button>
+          </td>
         `;
-        studentList.appendChild(listItem);
+        studentList.appendChild(row);
       });
 
       const deleteButtons = document.querySelectorAll(".delete-button");
