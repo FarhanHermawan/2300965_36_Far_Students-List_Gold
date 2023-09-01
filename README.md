@@ -28,8 +28,8 @@ Before getting started, make sure you have met the following requirements:
 
 ## Instalation 
 Terminal Bash:
-   1. git clone https://github.com/FarhanHermawan/student-lists.git
-   2. cd student-lists
+   1. git clone https://github.com/FarhanHermawan/Gold-Project.git
+   2. cd Gold-Project
    3. cd backend
    4. npm install
 
