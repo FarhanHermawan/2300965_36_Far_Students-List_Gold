@@ -48,3 +48,6 @@ The following API endpoints are available:\
   4. PUT /api/v1/students/:id: Update a student by ID.
   5. DELETE /api/v1/students/:id: Delete a student by ID.
 You can use these endpoints to interact with the student data.
+
+## Postman Documenter
+https://documenter.getpostman.com/view/28440197/2s9Y5ctfo8
