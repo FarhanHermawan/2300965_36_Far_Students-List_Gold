@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch("http://localhost:3000/api/v1/students");
       const students = await response.json();
 
-      studentList.innerHTML = ""; // Clear existing list
+      studentList.innerHTML = "";
 
-      students.forEach(student => {
+      students.forEach((student) => {
         const row = document.createElement("tr");
         row.innerHTML = `
           <td>${student.nim}</td>
@@ -31,12 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const deleteButtons = document.querySelectorAll(".delete-button");
-      deleteButtons.forEach(button => {
+      deleteButtons.forEach((button) => {
         button.addEventListener("click", handleDelete);
       });
 
       const editButtons = document.querySelectorAll(".edit-button");
-      editButtons.forEach(button => {
+      editButtons.forEach((button) => {
         button.addEventListener("click", handleEdit);
       });
     } catch (error) {
@@ -48,9 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
   async function handleDelete(event) {
     const id = event.target.dataset.id;
     try {
-      const response = await fetch(`http://localhost:3000/api/v1/students/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `http://localhost:3000/api/v1/students/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (response.ok) {
         fetchStudents(); // Refresh the list after deletion
       }
@@ -65,7 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch student data by ID
     try {
-      const response = await fetch(`http://localhost:3000/api/v1/students/${id}`);
+      const response = await fetch(
+        `http://localhost:3000/api/v1/students/${id}`
+      );
       const student = await response.json();
 
       // Populate modal inputs with student data
@@ -84,13 +89,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (newName && newNim && newClass) {
           try {
-            const response = await fetch(`http://localhost:3000/api/v1/students/${id}`, {
-              method: "PUT",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ name: newName, nim: newNim, class: newClass }),
-            });
+            const response = await fetch(
+              `http://localhost:3000/api/v1/students/${id}`,
+              {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  name: newName,
+                  nim: newNim,
+                  class: newClass,
+                }),
+              }
+            );
 
             if (response.ok) {
               fetchStudents(); // Refresh the list after editing
@@ -101,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       });
-
     } catch (error) {
       console.error("Error fetching student:", error);
     }
@@ -137,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (response.ok) {
-          fetchStudents(); // Refresh the list after adding
+          fetchStudents();
           document.getElementById("nim").value = "";
           document.getElementById("name").value = "";
           document.getElementById("class").value = "";
@@ -148,6 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Fetch students when the page loads
+  // Fetch students
   fetchStudents();
 });
